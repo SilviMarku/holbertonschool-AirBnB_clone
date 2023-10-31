@@ -4,15 +4,9 @@ import models
 import uuid
 from datetime import datetime
 
-class BaseModel:
-    #!/usr/bin/python3
-
-import models
-import uuid
-from datatime import datatime
 
 class BaseModel:
-    
+
     def __init__(self, *args, **kwargs):
         if kwargs:
             for key, value in kwargs.items():
@@ -37,8 +31,6 @@ class BaseModel:
         data['created_at'] = data['created_at'].isoformat()
         data['apdated_at'] = data['apdated_at'].isoformat()
 
-    
-    
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {elf.__dict__}"
 

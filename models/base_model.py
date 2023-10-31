@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+BaseModel class module which will be the base class of all instances created
+which are AirBnB related as states rooms etc..
+'''
+
 
 import models
 import uuid
@@ -6,41 +11,47 @@ from datetime import datetime
 
 
 class BaseModel:
+    '''
+    BaseModel Class
+    '''
 
     def __init__(self, *args, **kwargs):
+        '''
+        Init function for BaseModel instances
+        '''
+
         if kwargs:
             for key, value in kwargs.items():
-                if key == 'created_at' or key == 'updated_at':
-                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != '__class__':
                     setattr(self, key, value)
-        else:
-            self.id = str(uuid.uuid4())
-            self.created_at = self.updated_at = datetime.now()
-    
+        self.id = uuid.uuid4()
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+
     def __str__(self):
-        return f"[{self.__class__.name}] ({self.id}) {elf.__dict__}"
+        '''
+        String represantation of the instance
+        '''
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
+        '''
+        Function to update the update_at
+        attribute of the instance when
+        updated
+        '''
+
         self.updated_at = datetime.now()
-    
+
     def to_dict(self):
+        '''
+        Dictionary represantation of the instance
+        '''
 
         data = self.__dict__.copy()
         data['__class__'] = self.__class__.__name__
-        data['created_at'] = data['created_at'].isoformat()
-        data['apdated_at'] = data['apdated_at'].isoformat()
-
-    def __str__(self):
-        return f"[{self.__class__.__name__}] ({self.id}) {elf.__dict__}"
-
-    def save(self):
-        self.updated_at = datetime.now()
-    
-    def to_dict(self):
-
-        data = self.__dict__.copy()
-        data['__class__'] = self.__class__.__name__
-        data['created_at'] = data['created_at'].isoformat()
-        data['updated_at'] = data['updated_at'].isoformat()
-        return data 
+        data['created_at'] = data['created_at']\
+            .strftime("%Y-%m-%dT%H:%M:%S.%f")
+        data['updated_at'] = data['updated_at']\
+            .strftime("%Y-%m-%dT%H:%M:%S.%f")
+        return data

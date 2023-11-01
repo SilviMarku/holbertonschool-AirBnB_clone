@@ -10,7 +10,7 @@ import cmd
 
 class HBNBCommand(cmd.Cmd):
     '''
-    Console class
+    Console class to create a console
     '''
 
     prompt = "(hbnb) "

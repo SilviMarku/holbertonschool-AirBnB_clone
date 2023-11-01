@@ -9,7 +9,11 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = "(hbnb)"
+    '''
+    Console class
+    '''
+
+    prompt = "(hbnb) "
 
     def emptyline(self):
         pass

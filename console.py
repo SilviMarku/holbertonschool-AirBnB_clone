@@ -8,7 +8,6 @@ import cmd
 
 
 
-
 class HBNBCommand(cmd.Cmd):
     '''
     Console class to create a console

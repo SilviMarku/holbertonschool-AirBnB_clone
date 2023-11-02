@@ -15,14 +15,14 @@ class BaseModel:
     '''
     BaseModel Class which will
     be the base class for everything
-    else blah blah blah
+    else in this project
     '''
 
     def __init__(self, *args, **kwargs):
         '''
         Init function for BaseModel instances
         and will initializae depending
-        of the arguments given blah blah blah
+        of the arguments given between args and kwargs
         '''
 
         if kwargs:
@@ -39,8 +39,8 @@ class BaseModel:
 
     def __str__(self):
         '''
-        String represantation blah blah blah
-        of the instance blah blah blah
+        String represantation of the instance
+        created [ClassName] (id) {dictionary}
         '''
 
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
@@ -58,8 +58,9 @@ class BaseModel:
 
     def to_dict(self):
         '''
-        Dictionary represantation blah blah balh
-        of the instance balh blah blah blah
+        Dictionary represantation of the instace
+        containing all its values and the datetimes
+        will be converted in readeble format
         '''
 
         format = "%Y-%m-%dT%H:%M:%S.%f"

@@ -15,7 +15,8 @@ class HBNBCommand(cmd.Cmd):
     '''
 
     prompt = "(hbnb) "
-
+    valid_classes = ['BaseModel', 'User', 'State',
+                     'City', 'Amenity', 'Place', 'Review']
     def emptyline(self):
         pass
 
@@ -62,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         args = arg.split()
-        if args[0] not in ['BaseModel']:
+        if args[0] not in self.valid_classes:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
@@ -86,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         args = arg.split()
-        if args[0] not in ['BaseModel']:
+        if args[0] not in self.valid_classes:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
@@ -112,7 +113,7 @@ class HBNBCommand(cmd.Cmd):
             print([str(obj) for obj in objects.values()])
             return
         args = arg.split()
-        if args[0] not in ['BaseModel']:
+        if args[0] not in self.valid_classes:
             print("** class doesn't exist **")
             return
         print([str(obj) for obj in objects.values()
@@ -131,7 +132,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         args = arg.split()
-        if args[0] not in ['BaseModel']:
+        if args[0] not in self.valid_classes:
             print("** class doesn't exist **")
             return
         if len(args) == 1:

@@ -37,6 +37,7 @@ class HBNBCommand(cmd.Cmd):
         Command to create a new instance of BaseModel
         Usage: create <name of model to create>
         '''
+
         if not arg:
             print("** class name missing **")
             return
@@ -115,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
         print([str(obj) for obj in objects.values()
-              if obj.__class__.__name__ == args[0]])
+               if obj.__class__.__name__ == args[0]])
 
     def do_update(self, arg):
         '''
@@ -142,8 +143,8 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 3:
             print("** value missing **")
             return
-        objects = models.storage.all()
-        setattr(objects[f"{args[0]}.{args[1]}"], args[2], args[3])
+        object = models.storage.all()[f"{args[0]}.{args[1]}"]
+        setattr(object, args[2], args[3])
         models.storage.save()
 
 

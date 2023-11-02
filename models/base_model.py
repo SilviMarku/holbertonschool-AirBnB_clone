@@ -51,11 +51,9 @@ class BaseModel:
         '''
         Dictionary represantation of the instance
         '''
-
+        format = "%Y-%m-%dT%H:%M:%S.%f"
         data = self.__dict__.copy()
         data['__class__'] = self.__class__.__name__
-        data['created_at'] = data['created_at']\
-            .strftime("%Y-%m-%dT%H:%M:%S.%f")
-        data['updated_at'] = data['updated_at']\
-            .strftime("%Y-%m-%dT%H:%M:%S.%f")
+        data['created_at'] = data['created_at'].strftime(format)
+        data['updated_at'] = data['updated_at'].strftime(format)
         return data

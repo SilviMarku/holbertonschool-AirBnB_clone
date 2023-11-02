@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Test Modules"""
+'''
+This script initializes a FileStorage instance and reloads data,
+making it available for managing and persisting data.
+'''
+
+
 import io
 import sys
 import unittest
@@ -11,21 +16,45 @@ from models import storage
 
 
 class TestFileStorage(unittest.TestCase):
+    '''
+    This script initializes a FileStorage instance and reloads data,
+    making it available for managing and persisting data.
+    '''
 
     def test_storage(self):
+        '''
+        This script initializes a FileStorage instance and reloads data,
+        making it available for managing and persisting data.
+        '''
+
         obj = FileStorage()
         self.assertEqual(type(obj.all()), dict)
 
     def test_filepath(self):
+        '''
+        This script initializes a FileStorage instance and reloads data,
+        making it available for managing and persisting data.
+        '''
+
         obj = FileStorage()
         self.assertEqual(obj._FileStorage__file_path, "file.json")
 
     def test_objects(self):
+        '''
+        This script initializes a FileStorage instance and reloads data,
+        making it available for managing and persisting data.
+        '''
+
         obj = FileStorage()
         self.assertEqual(type(obj._FileStorage__objects), dict)
         self.assertEqual(obj._FileStorage__objects, obj.all())
 
     def test_methods(self):
+        '''
+        This script initializes a FileStorage instance and reloads data,
+        making it available for managing and persisting data.
+        '''
+
         obj = FileStorage()
         base = BaseModel()
         result = obj.new(base)

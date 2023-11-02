@@ -10,7 +10,7 @@ class Amenity(BaseModel):
     """
     A class variable for 'name' with an initial value of an empty string
     """
-    name + ""
+    name = ""
 
     def __init__(self, *args, **kwargs):
         """

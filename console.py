@@ -143,9 +143,13 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 3:
             print("** value missing **")
             return
-        object = models.storage.all()[f"{args[0]}.{args[1]}"]
-        setattr(object, args[2], args[3])
-        models.storage.save()
+        try:
+            object = models.storage.all()[f"{args[0]}.{args[1]}"]
+            setattr(object, args[2], args[3])
+            models.storage.save()
+        except Exception as e:
+            print("** no instance found **")
+            return
 
 
 if __name__ == '__main__':

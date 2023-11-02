@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Test Modules"""
+'''
+This script initializes a FileStorage instance and reloads data,
+making it available for managing and persisting data.
+'''
+
+
 import io
 import sys
 import unittest
@@ -10,6 +15,10 @@ from models import storage
 
 
 class TestBaseModel(unittest.TestCase):
+    '''
+    This script initializes a FileStorage instance and reloads data,
+    making it available for managing and persisting data.
+    '''
 
     def test_attributes(self):
         base1 = BaseModel()

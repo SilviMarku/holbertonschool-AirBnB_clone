@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script defines a Place class that inherits from BaseModel.
+This script defines a Place class
+that inherits from BaseModel.
 """
 
 
@@ -21,7 +22,9 @@ class Place(BaseModel):
     amenity_ids = []
 
     def __init__(self, *args, **kwargs):
-        '''
-        Init function
-        '''
+        """
+        Initialize a Place instance,
+        that inherits initialization from BaseModel.
+        """
+
         super().__init__(*args, **kwargs)

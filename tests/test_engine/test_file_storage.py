@@ -24,7 +24,7 @@ class TestFileStorage(unittest.TestCase):
         obj = FileStorage()
         self.assertEqual(type(obj._FileStorage__objects), dict)
         self.assertEqual(obj._FileStorage__objects, obj.all())
-    
+
     def test_methods(self):
         obj = FileStorage()
         base = BaseModel()

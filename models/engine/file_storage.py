@@ -11,7 +11,9 @@ from models.base_model import BaseModel
 
 class FileStorage:
     '''
-    FileStorage class
+    FileStorage class which will
+    serve as a storage for
+    all instances created
     '''
 
     __file_path = 'file.json'
@@ -47,8 +49,10 @@ class FileStorage:
 
     def reload(self):
         '''
-        Instance method to deserialiaze file
+        Instance method to
+        deserialiaze file
         '''
+
         try:
             with open(FileStorage.__file_path, "r") as file:
                 data = json.load(file)

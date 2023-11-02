@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Defines an Amenity class that inherits from BaseModel.
+Defines an Amenity class
+that inherits from BaseModel.
 """
 
 
@@ -9,8 +10,10 @@ from models.base_model import BaseModel
 
 class Amenity(BaseModel):
     """
-    A class variable for 'name' with an initial value of an empty string
+    A class variable for 'name' with an
+    initial value of an empty string
     """
+
     name = ""
 
     def __init__(self, *args, **kwargs):

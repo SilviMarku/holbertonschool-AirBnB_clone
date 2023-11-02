@@ -17,7 +17,9 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     '''
-    Console class to create a console
+    Console class to create a
+    console which will take differenct
+    commands and execute them
     '''
 
     prompt = "(hbnb) "
@@ -115,6 +117,7 @@ class HBNBCommand(cmd.Cmd):
         --------------------------------------------------------------------
         Usage: all <class name><-(optional it can be ignored) ex: all
         '''
+
         objects = models.storage.all()
         if not arg:
             print([str(obj) for obj in objects.values()])

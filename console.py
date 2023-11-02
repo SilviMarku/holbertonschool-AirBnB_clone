@@ -15,7 +15,6 @@ from models.place import Place
 from models.review import Review
 
 
-
 class HBNBCommand(cmd.Cmd):
     '''
     Console class to create a console

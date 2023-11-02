@@ -3,6 +3,7 @@
 This defines a Review class that inherits from BaseModel.
 """
 
+
 from models.base_model import BaseModel
 
 

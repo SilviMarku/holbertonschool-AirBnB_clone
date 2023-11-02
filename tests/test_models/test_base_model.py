@@ -28,6 +28,11 @@ class TestBaseModel(unittest.TestCase):
         base = BaseModel()
         self.assertNotEqual(len(storage.all()), 0)
 
+    def test_save(self):
+        base = BaseModel()
+        time = base.save()
+        self.assertEqual(base.updated_at, time)
+
     def test_to_dict(self):
         base = BaseModel()
         new_d = base.to_dict()

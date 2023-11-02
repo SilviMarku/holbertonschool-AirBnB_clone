@@ -54,6 +54,7 @@ class BaseModel:
 
         self.updated_at = datetime.now()
         mdl.storage.save()
+        return self.updated_at
 
     def to_dict(self):
         '''

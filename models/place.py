@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""
+'''
 This script defines a Place class
 that inherits from BaseModel.
-"""
+'''
 
 
 from models.base_model import BaseModel
@@ -22,9 +22,9 @@ class Place(BaseModel):
     amenity_ids = []
 
     def __init__(self, *args, **kwargs):
-        """
+        '''
         Initialize a Place instance,
         that inherits initialization from BaseModel.
-        """
+        '''
 
         super().__init__(*args, **kwargs)

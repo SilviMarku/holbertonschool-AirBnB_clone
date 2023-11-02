@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script defines a BaseModel class for managing and persisting data.
+This defines a BaseModel class for managing the data.
 """
 
 

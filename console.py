@@ -7,6 +7,7 @@ project where admin users can update add delete
 import cmd
 from models.base_model import BaseModel
 import models
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):

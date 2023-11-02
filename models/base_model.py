@@ -15,14 +15,14 @@ class BaseModel:
     '''
     BaseModel Class which will
     be the base class for everything
-    else
+    else blah blah blah
     '''
 
     def __init__(self, *args, **kwargs):
         '''
         Init function for BaseModel instances
         and will initializae depending
-        of the arguments given
+        of the arguments given blah blah blah
         '''
 
         if kwargs:
@@ -39,8 +39,8 @@ class BaseModel:
 
     def __str__(self):
         '''
-        String represantation
-        of the instance
+        String represantation blah blah blah
+        of the instance blah blah blah
         '''
 
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
@@ -58,8 +58,8 @@ class BaseModel:
 
     def to_dict(self):
         '''
-        Dictionary represantation
-        of the instance
+        Dictionary represantation blah blah balh
+        of the instance balh blah blah blah
         '''
 
         format = "%Y-%m-%dT%H:%M:%S.%f"

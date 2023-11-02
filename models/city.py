@@ -20,4 +20,3 @@ class City(BaseModel):
         Inicialize a City instance that inherits initialization from BaseModel.
         """
         super().__init__(*args, **kwargs)
-        

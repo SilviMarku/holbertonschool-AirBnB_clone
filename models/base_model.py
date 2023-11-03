@@ -43,7 +43,9 @@ class BaseModel:
         created [ClassName] (id) {dictionary}
         '''
 
-        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+        string = "[{}]".format(self.__class__.__name__)
+        string += " ({}) {}".format(self.id, self.__dict__)
+        return string
 
     def save(self):
         '''

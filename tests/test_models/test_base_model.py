@@ -81,5 +81,5 @@ class TestBaseModel(unittest.TestCase):
         '''
 
         base = BaseModel()
-        x = f"{base.__class__.__name__} ({base.id}) {base.__dict__}"
+        x = f"[{base.__class__.__name__}] ({base.id}) {base.__dict__}"
         self.assertEqual(str(base), x)
